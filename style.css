@@ -1,0 +1,129 @@
+:root{
+  --black:#000000;
+  --white:#ffffff;
+  --neutral-1:#111111;
+  --neutral-2:#F5F5F5;
+  --neutral-3:#DDDDDD;
+  --accent:#0EA5E9;
+  --max-width:1100px;
+  --radius:10px;
+  --sp:18px;
+  --heading-font:"Poppins",sans-serif;
+  --body-font:"Inter",sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:var(--body-font);
+  color:var(--neutral-1);
+  background:var(--neutral-2);
+  -webkit-font-smoothing:antialiased;
+}
+
+.container{max-width:var(--max-width);margin:0 auto;padding:0 20px}
+
+/* Skip link */
+.skip-link{
+  position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;
+}
+.skip-link:focus{left:10px;top:10px;width:auto;height:auto;background:#fff;padding:8px;border-radius:4px;z-index:1000}
+
+/* Header */
+.site-header{background:var(--white);border-bottom:1px solid var(--neutral-3);position:sticky;top:0;z-index:50}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+.logo-box{font-family:var(--heading-font);font-weight:800;letter-spacing:0.6px;color:var(--black)}
+.logo-accent{color:var(--accent)}
+.tagline{display:block;font-size:12px;color:#666;margin-top:4px}
+
+/* Nav */
+.nav-list{display:flex;gap:16px;list-style:none;margin:0;padding:0}
+.nav-list a{color:var(--neutral-1);text-decoration:none;font-weight:600;font-size:14px}
+#nav-toggle{display:none}
+
+/* Header CTAs */
+.header-ctas{display:flex;gap:10px}
+.btn{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:700;cursor:pointer;border:0}
+.btn-primary{background:var(--accent);color:var(--white)}
+.btn-secondary{background:transparent;border:2px solid var(--neutral-3);color:var(--neutral-1)}
+.btn-outline{background:transparent;border:2px solid var(--accent);color:var(--accent)}
+.btn.block{display:block;width:100%;text-align:center}
+
+/* Hero */
+.hero{padding:48px 0;background:linear-gradient(180deg,#ffffff, #fbfeff);border-bottom:1px solid var(--neutral-3)}
+.hero-inner{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+.hero-title{font-family:var(--heading-font);font-size:32px;color:var(--neutral-1);margin:0 0 12px;line-height:1.05}
+.lead{margin:0 0 18px;color:#333}
+.hero-buttons{display:flex;gap:12px;margin-bottom:16px}
+.hero-badges{display:flex;gap:12px;list-style:none;padding:0;margin:8px 0 0;font-size:13px;color:#444}
+.visual-box{height:260px;background:linear-gradient(135deg,var(--accent),#7dd3fc);border-radius:14px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+
+/* Trust bar */
+.trust-bar{background:var(--neutral-2);padding:12px 0;border-bottom:1px solid var(--neutral-3)}
+.trust-grid{display:flex;gap:16px;justify-content:space-between;font-weight:600;color:#333}
+
+/* Sections */
+.section{padding:48px 0}
+.section.alt{background:var(--white)}
+h2{font-family:var(--heading-font);color:var(--neutral-1);margin:0 0 8px;font-size:22px}
+.section-sub{color:#666;margin:0 0 20px;font-size:15px}
+
+/* Grid helpers */
+.grid{display:grid;gap:18px}
+.why-grid{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.feature{background:var(--white);padding:18px;border-radius:10px;box-shadow:0 6px 20px rgba(17,17,17,0.04)}
+.services-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+.service-card{background:var(--neutral-2);padding:18px;border-radius:10px;border:1px solid var(--neutral-3)}
+.industries-grid{grid-template-columns:repeat(auto-fit,minmax(140px,1fr))}
+.industry{background:var(--white);padding:14px;border-radius:8px;text-align:center;font-weight:700;box-shadow:0 6px 16px rgba(17,17,17,0.04)}
+
+.process-steps{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.process-steps li{background:var(--white);padding:14px;border-radius:8px;border-left:4px solid var(--accent)}
+
+/* Pricing */
+.pricing-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:12px}
+.price-card{background:var(--white);padding:18px;border-radius:10px;text-align:center}
+.price{font-weight:800;font-size:20px;margin:8px 0}
+
+/* Testimonials */
+.testimonials-slider{position:relative;padding:18px 0}
+.testimonial{display:none;background:var(--white);padding:20px;border-radius:10px;box-shadow:0 6px 20px rgba(17,17,17,0.04)}
+.testimonial.active{display:block}
+.testimonial p{font-size:16px;margin:0 0 10px;color:#333}
+.testimonial cite{font-size:14px;color:#666}
+
+/* FAQ */
+.faq-list{display:grid;gap:8px}
+.faq-q{width:100%;background:var(--white);padding:14px;border-radius:8px;border:1px solid var(--neutral-3);text-align:left;font-weight:700;cursor:pointer}
+.faq-a{display:none;padding:10px 14px;background:var(--neutral-2);border-radius:8px}
+
+/* Contact form */
+.contact-grid{display:grid;grid-template-columns:1fr 320px;gap:28px;align-items:start}
+.lead-form{background:var(--white);padding:18px;border-radius:10px;border:1px solid var(--neutral-3)}
+.form-row{margin-bottom:10px}
+.form-row.split{display:flex;gap:8px}
+.form-row label{display:block;font-weight:600;margin-bottom:6px;font-size:13px}
+.form-row input,.form-row textarea{width:100%;padding:10px;border:1px solid var(--neutral-3);border-radius:8px;font-size:14px}
+.form-actions{display:flex;gap:10px;align-items:center}
+.form-msg{margin-top:10px;color:var(--accent);font-weight:700}
+
+/* CTA band */
+.cta-band{background:linear-gradient(90deg,var(--accent),#38bdf8);color:#fff;padding:22px;border-radius:12px;margin:28px 0}
+.cta-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}
+
+/* Footer */
+.site-footer{padding:28px 0;background:var(--white);border-top:1px solid var(--neutral-3)}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:18px;align-items:start}
+.footer-links{list-style:none;padding:0;margin:0}
+.footer-links a{color:var(--neutral-1);text-decoration:none}
+
+/* Responsiveness */
+@media (max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .trust-grid{flex-direction:column;gap:8px}
+  .contact-grid{grid-template-columns:1fr}
+  .header-ctas{display:none}
+  .nav-list{display:none}
+  #nav-toggle{display:inline-block}
+}
